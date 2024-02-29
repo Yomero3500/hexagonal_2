@@ -4,7 +4,7 @@ import { Signale } from 'signale';
 import cors from 'cors';
 import helmet from 'helmet';
 import * as dotenv from "dotenv";
-import { registrationRouter } from "./registration/infrastructure/route/RegistrationRouter";
+import { registrationRouter } from "./registros/infraestructure/routes/RegistroRouter";
 dotenv.config();
 
 const port: string | undefined = process.env.PORT;
