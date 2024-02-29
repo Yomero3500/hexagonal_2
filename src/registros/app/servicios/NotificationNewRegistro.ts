@@ -1,5 +1,5 @@
 import { Registration } from "../../domain/entidad/Registro";
-import { NotificationNewRegistry } from "../../infrastructure/serviceRabbitMQ/NotificationNewRegistry";
+import { NotificationNewRegistry } from "../../infraestructure/rabbitMQService/NotificacionAddRegistro";
 
 export class NotificationRegistryUSeCase {
   constructor(readonly serviceNotifiacion: NotificationNewRegistry) {}
