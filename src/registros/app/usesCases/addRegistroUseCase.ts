@@ -1,7 +1,7 @@
 import { Registration } from "../../domain/entidad/Registro";
 import { RegistrationRepository } from "../../domain/interfaz/RegistroRepository";
 import { NotificationRegistryUSeCase } from "../servicios/NotificationNewRegistro";
-import { MessageServiceSocket } from "../../infraestructure/serviceMessage/MessageServiceSocket";";
+import { MessageServiceSocket } from "../../infraestructure/serviceMessage/MessageServiceSocket";
 
 export class CreateRegistryUseCase {
     constructor( readonly registrationRepository: RegistrationRepository, readonly sendNotification: NotificationRegistryUSeCase, 
