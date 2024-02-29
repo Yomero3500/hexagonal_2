@@ -16,9 +16,7 @@ export class CreateRegistryController {
                 res.status(201).send({
                     status: "success",
                     data:{
-                        id_registration: registry?.id_registration,
                         id_client: registry?.id_client,
-                        content: registry?.content
                     },
                 });
             }else{

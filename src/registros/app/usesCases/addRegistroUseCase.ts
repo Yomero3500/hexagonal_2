@@ -13,8 +13,7 @@ export class CreateRegistryUseCase {
     ): Promise<Registration | null> {
         try {
             const registry: any = await this.registrationRepository.createRegistry(
-                id_cliente,
-                content
+                id_cliente
             );
             if(registry) {
                 this.sendNotification.run(registry);
