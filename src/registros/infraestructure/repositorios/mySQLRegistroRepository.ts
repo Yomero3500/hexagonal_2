@@ -3,15 +3,12 @@ import { Registration } from "../../domain/entidad/Registro";
 import { RegistrationRepository } from "../../domain/interfaz/RegistroRepository";
 
 export class MySqlRegistryRepository implements RegistrationRepository {
-    async createRegistry(
-        id_client: number,
-    ): Promise<Registration | null> {
-        const sql = "INSERT INTO registrations (id_client, content) VALUES (?,?)";
-        const params: any[] = [id_client];
-
-        try {
-            const [result]: any = await query(sql, params);
-            return new Registration( id_client);
+    async createRegistry(id_client: number ): Promise<Registration | null> {
+    const sql = "INSERT INTO registrations (id_client, content) VALUES (?,?)";
+    const params: any[] = [id_client];
+    try {
+        const [result]: any = await query(sql, params);
+        return new Registration(id_client);
         } catch (error) {
             console.log(error);
             return null;

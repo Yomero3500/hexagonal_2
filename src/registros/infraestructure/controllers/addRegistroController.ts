@@ -17,6 +17,7 @@ export class CreateRegistryController {
                     status: "success",
                     data:{
                         id_client: registry?.id_client,
+                        
                     },
                 });
             }else{

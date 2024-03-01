@@ -9,11 +9,6 @@ export class NotificationNewRegistry implements INotificationNewRegistry {
     private exch: any;
   
     constructor() {
-      // this.options = {
-      //   username: process.env.AMQP_USERNAME,
-      //   password: process.env.AMQP_PASS,
-      //   port: process.env.AMQP_PORT,
-      // };
       this.url = process.env.AMQP_URL_EC2;
       this.exch = process.env.EXCHANGE_EC2;
     }
