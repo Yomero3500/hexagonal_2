@@ -8,7 +8,7 @@ export class MySqlRegistryRepository implements RegistrationRepository {
     const params: any = id_client;
     try {
         console.log(params);
-        const [result]: any = await query(sql, params);
+        const result: any = await query(sql, params);
         console.log(result);
         return new Registration(id_client);
         } catch (error) {
