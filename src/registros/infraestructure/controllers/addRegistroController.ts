@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { CreateRegistryUseCase } from "../../app/usesCases/addRegistroUseCase";
+import { log } from "console";
 
 export class CreateRegistryController {
     constructor (readonly createRegistryUseCase: CreateRegistryUseCase) {}
@@ -12,6 +13,8 @@ export class CreateRegistryController {
             );
 
             if(registry){
+                console.log(data.id_client);
+                
                 res.status(201).send({
                     status: "success",
                     data:{

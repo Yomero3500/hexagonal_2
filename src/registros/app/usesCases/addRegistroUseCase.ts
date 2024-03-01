@@ -11,6 +11,8 @@ export class CreateRegistryUseCase {
         id_client: number,
     ): Promise<Registration | null> {
         try {
+            console.log(id_client);
+            
             const registry: any = await this.registrationRepository.createRegistry(
                 id_client
             );
