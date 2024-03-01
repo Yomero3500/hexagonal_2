@@ -5,9 +5,13 @@ import { RegistrationRepository } from "../../domain/interfaz/RegistroRepository
 export class MySqlRegistryRepository implements RegistrationRepository {
     async createRegistry(id_client: number ): Promise<Registration | null> {
     const sql = "INSERT INTO registrations (id_client) VALUES (?)";
-    const params: any[] = [id_client];
+    const params: any = id_client;
     try {
         const [result]: any = await query(sql, params);
+        console.log(result);
+        console.log(params);
+        
+        
         return new Registration(id_client);
         } catch (error) {
             console.log(error);
