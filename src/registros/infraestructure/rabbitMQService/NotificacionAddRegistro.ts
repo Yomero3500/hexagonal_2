@@ -16,7 +16,7 @@ export class NotificationNewRegistry implements INotificationNewRegistry {
     async sendNotification(registration: Registration): Promise<boolean> {
       const conn = await amqplib.connect(this.url);
       const ch = await conn.createChannel();
-      const status = await ch.publish(this.exch, "", Buffer.from("Cliente registrado"));
+      const status = await ch.publish(this.exch, "12345", Buffer.from("Cliente registrado"));
       console.log(status);
       return status;
     }
