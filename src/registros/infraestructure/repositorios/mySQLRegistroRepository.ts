@@ -9,7 +9,7 @@ export class MySqlRegistryRepository implements RegistrationRepository {
     try {
         console.log("log en el repo sql",params);
         const result: any = await query(sql, params);
-        console.log(result);
+        console.log("log2 en el repo sql",result);
         return new Registration(id_venta);
         } catch (error) {
             console.log(error);
