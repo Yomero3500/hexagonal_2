@@ -1,5 +1,5 @@
 export class Registration{
     constructor(
-        readonly id_client: number,
+        readonly id_venta: number,
     ) {}
 }

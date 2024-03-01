@@ -1,10 +1,8 @@
 import amqplib from "amqplib";
-
 import { Registration } from "../../domain/entidad/Registro";
 import INotificationNewRegistry from "../../domain/servicios/INotificationNewRegistro";
 
 export class NotificationNewRegistry implements INotificationNewRegistry {
-    // private options: any;
     private url: any;
     private exch: any;
   

@@ -8,13 +8,13 @@ export class CreateRegistryUseCase {
         readonly messageServiceSocket: MessageServiceSocket) {}
 
     async run(
-        id_client: number,
+        id_venta: number,
     ): Promise<Registration | null> {
         try {
-            console.log(id_client);
+            console.log("log en el useCase",id_venta);
             
             const registry: any = await this.registrationRepository.createRegistry(
-                id_client
+                id_venta
             );
             if(registry) {
                 this.sendNotification.run(registry);
