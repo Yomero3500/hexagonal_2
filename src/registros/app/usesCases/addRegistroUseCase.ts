@@ -9,7 +9,6 @@ export class CreateRegistryUseCase {
 
     async run(
         id_cliente: number,
-        content: string
     ): Promise<Registration | null> {
         try {
             const registry: any = await this.registrationRepository.createRegistry(

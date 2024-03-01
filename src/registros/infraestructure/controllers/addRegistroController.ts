@@ -9,7 +9,6 @@ export class CreateRegistryController {
         try {
             const registry = await this.createRegistryUseCase.run(
                 data.id_client,
-                data.content
             );
 
             if(registry){
