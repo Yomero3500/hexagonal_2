@@ -8,11 +8,11 @@ export class CreateRegistryUseCase {
         readonly messageServiceSocket: MessageServiceSocket) {}
 
     async run(
-        id_cliente: number,
+        id_client: number,
     ): Promise<Registration | null> {
         try {
             const registry: any = await this.registrationRepository.createRegistry(
-                id_cliente
+                id_client
             );
             if(registry) {
                 this.sendNotification.run(registry);
