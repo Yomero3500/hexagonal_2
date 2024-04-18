@@ -7,7 +7,7 @@ export class CreateRegistryController {
     async run(req:Request, res:Response){
         const data = req.body.id_venta;
         console.log("log en el controller",data);
-        const id_venta = parseInt(data)
+        const id_venta = parseFloat(data)
         console.log(id_venta);
         
         try {
