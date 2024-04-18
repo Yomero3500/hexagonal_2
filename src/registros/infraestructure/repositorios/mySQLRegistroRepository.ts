@@ -3,7 +3,7 @@ import { Registration } from "../../domain/entidad/Registro";
 import { RegistrationRepository } from "../../domain/interfaz/RegistroRepository";
 
 export class MySqlRegistryRepository implements RegistrationRepository {
-    async createRegistry(id_venta: string ): Promise<Registration | null> {
+    async createRegistry(id_venta: number ): Promise<Registration | null> {
     const sql = "INSERT INTO registrations (id_venta) VALUES (?)";
     const params: any = id_venta;
     try {
