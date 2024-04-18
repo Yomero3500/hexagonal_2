@@ -10,6 +10,8 @@ export class MessageServiceSocket implements IMessageService{
             console.log("Connected to server");
             
             socket.emit("newClient", "Cliente registrado");
+            console.log("cliente agregado");
+            
         });
 
         socket.on("disconnect", ()=>{
