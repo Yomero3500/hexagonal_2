@@ -5,7 +5,7 @@ export class CreateRegistryController {
     constructor (readonly createRegistryUseCase: CreateRegistryUseCase) {}
 
     async run(req:Request, res:Response){
-        const data = req.body;
+        const data = req.body.id_venta;
         console.log("log en el controller",data);
         
         try {
