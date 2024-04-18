@@ -8,7 +8,7 @@ export class CreateRegistryUseCase {
         readonly messageServiceSocket: MessageServiceSocket) {}
 
     async run(
-        id_venta: number,
+        id_venta: string,
     ): Promise<Registration | null> {
         try {
             console.log("log en el useCase",id_venta);
