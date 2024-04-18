@@ -7,7 +7,9 @@ export class CreateRegistryController {
     async run(req:Request, res:Response){
         const data = req.body.id_venta;
         console.log("log en el controller",data);
-        const id_venta = Number(data.id_venta);
+        const id_venta = parseInt(data)
+        console.log(id_venta);
+        
         try {
             const registry = await this.createRegistryUseCase.run(
                id_venta
